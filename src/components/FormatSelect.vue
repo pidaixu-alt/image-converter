@@ -12,21 +12,23 @@
 </template>
 
 <script setup lang="ts">
+type ImageFormat = 'image/jpeg' | 'image/png' | 'image/webp'
+
 const props = defineProps<{
-  modelValue: 'image/jpeg' | 'image/png' | 'image/webp'
+  modelValue: ImageFormat
 }>()
 
 const emit = defineEmits<{
-  'update:modelValue': [value: 'image/jpeg' | 'image/png' | 'image/webp']
+  'update:modelValue': [value: ImageFormat]
 }>()
 
 const formats = [
-  { label: 'JPG', value: 'image/jpeg' },
-  { label: 'PNG', value: 'image/png' },
-  { label: 'WEBP', value: 'image/webp' }
+  { label: 'JPG', value: 'image/jpeg' as ImageFormat },
+  { label: 'PNG', value: 'image/png' as ImageFormat },
+  { label: 'WEBP', value: 'image/webp' as ImageFormat }
 ]
 
-const selectFormat = (value: 'image/jpeg' | 'image/png' | 'image/webp') => {
+const selectFormat = (value: ImageFormat) => {
   emit('update:modelValue', value)
 }
 </script>

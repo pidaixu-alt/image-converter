@@ -13,11 +13,14 @@
 </template>
 
 <script setup lang="ts">
-const props = defineProps({
-  tabs: { type: Array, required: true },
-  activeTab: { type: String, required: true }
-})
-defineEmits(['update:activeTab'])
+const props = defineProps<{
+  tabs: string[]
+  activeTab: string
+}>()
+
+defineEmits<{
+  'update:activeTab': [tab: string]
+}>()
 </script>
 
 <style scoped>
