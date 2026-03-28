@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import { useGtag } from 'vue-gtag-next'
 
 const routes = [
   {
@@ -23,5 +24,11 @@ const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
+// 👇 加上这个，路由切换自动上报 GA4
+router.afterEach((to) => {
+  const { pageview } = useGtag()
+  pageview(to.fullPath)
+})
+
 
 export default router
