@@ -8,7 +8,7 @@ const app = createApp(App)
 // 👇 只传配置，router 内部会自动使用
 app.use(VueGtag, {
   property: {
-    id: 'G-HJZVW3PB4N',
+    id: 'G-DEYJCZ88BJ',
     params: {
       anonymize_ip: true
     }
