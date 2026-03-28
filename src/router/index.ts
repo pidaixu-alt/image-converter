@@ -16,11 +16,6 @@ const routes = [
     path: '/privacy-policy',
     name: 'privacy',
     component: () => import('../views/PrivacyView.vue')  // 隐私政策
-  },
-  {
-    path: '/contact',
-    name: 'contact',
-    component: () => import('../views/ContactView.vue')  // 联系我们
   }
 ]
 
