@@ -64,7 +64,7 @@
 
         <section>
           <h2>7. Contact Us</h2>
-          <p>If you have privacy concerns, please contact us at: <strong>support@yourdomian.com</strong></p>
+          <p>If you have privacy concerns, please contact us at: <strong>support@imageconverter.best</strong></p>
         </section>
 
         <section>

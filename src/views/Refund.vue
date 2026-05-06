@@ -46,7 +46,7 @@
           <h2>5. How to Request a Refund</h2>
           <p>
             To request a refund, please contact our support team with your order details and reason for the refund
-            request. You can reach us at <strong>support@yourdomain.com</strong>. Include:
+            request. You can reach us at <strong>support@imageconverter.best</strong>. Include:
           </p>
           <ul>
             <li>Your order ID</li>

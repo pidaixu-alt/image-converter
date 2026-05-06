@@ -85,7 +85,7 @@
 
         <section>
           <h2>10. Contact</h2>
-          <p>For questions regarding these terms, please contact: <strong>support@yourdomain.com</strong></p>
+          <p>For questions regarding these terms, please contact: <strong>support@imageconverter.best</strong></p>
         </section>
 
         <section class="last-updated">

@@ -18,7 +18,7 @@
 
       <div class="footer-section">
         <h3>Contact</h3>
-        <p><a href="mailto:support@yourdomain.com">support@yourdomain.com</a></p>
+        <p><a href="mailto:support@imageconverter.best">support@imageconverter.best</a></p>
       </div>
     </div>
 
