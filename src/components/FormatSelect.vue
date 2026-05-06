@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-type ImageFormat = 'image/jpeg' | 'image/png' | 'image/webp'
+type ImageFormat = 'image/jpeg' | 'image/png' | 'image/webp' | 'image/avif' | 'image/bmp'
 
 const props = defineProps<{
   modelValue: ImageFormat
@@ -25,7 +25,9 @@ const emit = defineEmits<{
 const formats = [
   { label: 'JPG', value: 'image/jpeg' as ImageFormat },
   { label: 'PNG', value: 'image/png' as ImageFormat },
-  { label: 'WEBP', value: 'image/webp' as ImageFormat }
+  { label: 'WebP', value: 'image/webp' as ImageFormat },
+  { label: 'AVIF', value: 'image/avif' as ImageFormat },
+  { label: 'BMP', value: 'image/bmp' as ImageFormat }
 ]
 
 const selectFormat = (value: ImageFormat) => {

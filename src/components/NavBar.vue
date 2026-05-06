@@ -7,9 +7,9 @@
 
     <!-- 右侧语言切换 -->
     <div class="nav-right">
-      <select class="lang">
+      <!-- <select class="lang">
         <option value="en">English</option>
-      </select>
+      </select> -->
     </div>
   </nav>
 </template>

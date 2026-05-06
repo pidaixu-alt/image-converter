@@ -5,12 +5,12 @@
     <header class="hero">
       <h1>Online Image Converter</h1>
       <p class="desc">
-        A free browser tool to convert HEIC, JPG, PNG, WebP, GIF, BMP, TIFF, AVIF and ICO images to JPG, PNG, WebP format.
-        No upload to server — conversion happens in your browser.
+        A free browser tool to convert your images to JPG, PNG, WebP, AVIF, or BMP format.
+        No server upload — all conversion happens instantly in your browser.
       </p >
       <ul class="features">
-        <li>Drag or select images — process up to 20 files at once.</li>
-        <li>Choose output format, click "Convert", then save each file.</li>
+        <li>Select or drag images — process up to 20 files at once.</li>
+        <li>Choose your format and download instantly.</li>
       </ul>
     </header>
 
@@ -44,25 +44,38 @@
           <p class="price">$0</p>
           <ul class="features-list">
             <li>✓ 5 conversions per day</li>
-            <li>✓ Basic formats (JPG, PNG, WebP)</li>
+            <li>✓ All 5 formats supported</li>
             <li>✓ Up to 10 files at once</li>
-            <li>✗ No batch processing</li>
-            <li>✗ Standard support</li>
+            <li>✗ Batch processing</li>
+            <li>✗ Email support</li>
           </ul>
           <button class="btn-plan btn-free">Get Started</button>
         </div>
 
-        <div class="pricing-card featured">
+        <div class="pricing-card">
           <h3>Pro Plan</h3>
           <p class="price">$4.99<span>/month</span></p>
           <ul class="features-list">
             <li>✓ Unlimited conversions</li>
-            <li>✓ All formats (HEIC, TIFF, AVIF, etc.)</li>
+            <li>✓ All 5 formats (JPG, PNG, WebP, AVIF, BMP)</li>
             <li>✓ Up to 20 files at once</li>
             <li>✓ Batch processing</li>
             <li>✓ Priority support</li>
           </ul>
           <button class="btn-plan btn-pro">Subscribe Now</button>
+        </div>
+
+        <div class="pricing-card featured">
+          <h3>Annual Plan</h3>
+          <p class="price">$49.99<span>/year</span></p>
+          <ul class="features-list">
+            <li>✓ 100 conversions per day</li>
+            <li>✓ All 5 formats (JPG, PNG, WebP, AVIF, BMP)</li>
+            <li>✓ Up to 20 files at once</li>
+            <li>✓ Batch processing</li>
+            <li>✓ Priority support</li>
+          </ul>
+          <button class="btn-plan btn-year">Subscribe Now</button>
         </div>
       </div>
     </section>
@@ -80,7 +93,7 @@ import FormatSelect from '../components/FormatSelect.vue'
 import PageFooter from '../components/PageFooter.vue'
 import { convertImages, downloadBlob } from '../utils/imageUtil'
 
-type ImageFormat = 'image/jpeg' | 'image/png' | 'image/webp'
+type ImageFormat = 'image/jpeg' | 'image/png' | 'image/webp' | 'image/avif' | 'image/bmp'
 
 const activeTab = ref<string>('Converter')
 const files = ref<File[]>([])
@@ -185,9 +198,9 @@ const handleConvert = async () => {
 
 .pricing-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
-  max-width: 900px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 
@@ -273,9 +286,22 @@ const handleConvert = async () => {
   background: #2b6cb0;
 }
 
+.btn-year {
+  background: #3182ce;
+  color: white;
+}
+
+.btn-year:hover {
+  background: #2b6cb0;
+}
+
 @media (max-width: 768px) {
   .pricing-section h2 {
     font-size: 1.6rem;
+  }
+
+  .pricing-grid {
+    grid-template-columns: 1fr;
   }
 
   .pricing-card.featured {
