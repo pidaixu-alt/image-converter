@@ -34,7 +34,41 @@
         </button>
       </div>
     </div>
+
+    <!-- Pricing Section -->
+    <section class="pricing-section">
+      <h2>Choose Your Plan</h2>
+      <div class="pricing-grid">
+        <div class="pricing-card">
+          <h3>Free Plan</h3>
+          <p class="price">$0</p>
+          <ul class="features-list">
+            <li>✓ 5 conversions per day</li>
+            <li>✓ Basic formats (JPG, PNG, WebP)</li>
+            <li>✓ Up to 10 files at once</li>
+            <li>✗ No batch processing</li>
+            <li>✗ Standard support</li>
+          </ul>
+          <button class="btn-plan btn-free">Get Started</button>
+        </div>
+
+        <div class="pricing-card featured">
+          <h3>Pro Plan</h3>
+          <p class="price">$4.99<span>/month</span></p>
+          <ul class="features-list">
+            <li>✓ Unlimited conversions</li>
+            <li>✓ All formats (HEIC, TIFF, AVIF, etc.)</li>
+            <li>✓ Up to 20 files at once</li>
+            <li>✓ Batch processing</li>
+            <li>✓ Priority support</li>
+          </ul>
+          <button class="btn-plan btn-pro">Subscribe Now</button>
+        </div>
+      </div>
+    </section>
   </div>
+
+  <PageFooter />
 </template>
 
 <script setup lang="ts">
@@ -43,6 +77,7 @@ import NavBar from '../components/NavBar.vue'
 import TabBar from '../components/TabBar.vue'
 import FileUpload from '../components/FileUpload.vue'
 import FormatSelect from '../components/FormatSelect.vue'
+import PageFooter from '../components/PageFooter.vue'
 import { convertImages, downloadBlob } from '../utils/imageUtil'
 
 type ImageFormat = 'image/jpeg' | 'image/png' | 'image/webp'
@@ -135,5 +170,116 @@ const handleConvert = async () => {
 
 .btn-convert:hover:not(:disabled) {
   background: #2b6cb0;
+}
+
+.pricing-section {
+  margin: 3rem 0;
+}
+
+.pricing-section h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: #2d3748;
+  margin-bottom: 2.5rem;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.pricing-card {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  padding: 2rem;
+  text-align: center;
+  border: 2px solid #e2e8f0;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.pricing-card.featured {
+  border-color: #3182ce;
+  box-shadow: 0 8px 20px rgba(49, 130, 206, 0.15);
+  transform: scale(1.02);
+}
+
+.pricing-card h3 {
+  font-size: 1.5rem;
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.pricing-card .price {
+  font-size: 2rem;
+  color: #3182ce;
+  font-weight: bold;
+  margin: 1rem 0;
+}
+
+.pricing-card .price span {
+  font-size: 0.8rem;
+  color: #718096;
+}
+
+.features-list {
+  list-style: none;
+  padding: 0;
+  margin: 1.5rem 0;
+  text-align: left;
+  color: #4a5568;
+}
+
+.features-list li {
+  padding: 0.6rem 0;
+  font-size: 0.95rem;
+}
+
+.btn-plan {
+  width: 100%;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+  margin-top: 1rem;
+}
+
+.btn-free {
+  background: #e2e8f0;
+  color: #2d3748;
+}
+
+.btn-free:hover {
+  background: #cbd5e0;
+}
+
+.btn-pro {
+  background: #3182ce;
+  color: white;
+}
+
+.btn-pro:hover {
+  background: #2b6cb0;
+}
+
+@media (max-width: 768px) {
+  .pricing-section h2 {
+    font-size: 1.6rem;
+  }
+
+  .pricing-card.featured {
+    transform: scale(1);
+  }
 }
 </style>
