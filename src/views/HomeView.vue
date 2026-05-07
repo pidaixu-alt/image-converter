@@ -54,7 +54,7 @@
 
         <div class="pricing-card">
           <h3>Pro Plan</h3>
-          <p class="price">$4.99<span>/month</span></p>
+          <p class="price">$1<span></span></p>
           <ul class="features-list">
             <li>✓ Unlimited conversions</li>
             <li>✓ All 5 formats (JPG, PNG, WebP, AVIF, BMP)</li>
@@ -62,20 +62,20 @@
             <li>✓ Batch processing</li>
             <li>✓ Priority support</li>
           </ul>
-          <button class="btn-plan btn-pro">Subscribe Now</button>
+          <button class="btn-plan btn-pro">Buy Now</button>
         </div>
 
         <div class="pricing-card featured">
-          <h3>Annual Plan</h3>
-          <p class="price">$49.99<span>/year</span></p>
+          <h3>Premium Plan</h3>
+          <p class="price">$5<span></span></p>
           <ul class="features-list">
-            <li>✓ 100 conversions per day</li>
+            <li>✓ Unlimited conversions</li>
             <li>✓ All 5 formats (JPG, PNG, WebP, AVIF, BMP)</li>
-            <li>✓ Up to 20 files at once</li>
+            <li>✓ Up to 200 files at once</li>
             <li>✓ Batch processing</li>
             <li>✓ Priority support</li>
           </ul>
-          <button class="btn-plan btn-year">Subscribe Now</button>
+          <button class="btn-plan btn-year">Buy Now</button>
         </div>
       </div>
     </section>
